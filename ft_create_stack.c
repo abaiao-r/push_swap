@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_create_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/24 17:03:20 by andrefranci      ###   ########.fr       */
+/*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
+/*   Updated: 2023/01/24 18:56:45 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+t_stack	*ft_create_stack(int argc, char **argv)
 {
-	int i;
 	t_stack *stack_a;
-	t_stack *stack_b;
+	long int index_node;
+	int i;
 
-    if (argc < 2)
-        return (ft_error());
-    if (!check_argv))
-        ft_error();
-	stack_b = NULL; 
-	stack_a = ft_create_stack(argc, argv);
-	
+	stack_a = NULL; 
+    stack_a = (t_stack *)malloc(sizeof(t_stack));
 
-	/* i = argc
-
-		stack_a = (t_list **)ft_calloc(1, sizeof(t_list));
-	i = 0;
+    i = 0;
 	while (i < argc)
 	{
-		i++;
-	} */
+		index_node = ft_atoi(argv[i]);
+        ft_lstadd_back (stack_a, t_stack_);
+        i++;
+	}
+
+	return (stack_a);
 }
