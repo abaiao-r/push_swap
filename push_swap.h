@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/24 15:33:47 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/01/25 17:12:31 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,28 @@ typedef struct s_list
 {
 	long long int	number;
 	struct s_list	*next;
-	struct s_list	*prev;
+	struct s_list	*previous;
 }					t_stack;
 
 /* check_argv */
 
-int	argv_is_number(char *argv);
-int	argv_iszero(char *argv);
-int	argv_duplicate(int argc, char **argv);
-int	check_argv(char **argv);
+int					argv_is_number(char *argv);
+int					argv_iszero(char *argv);
+int					argv_duplicate(int argc, char **argv);
+int					check_argv(char **argv);
 
 /* check_argv_utils */
 
-int	ft_error(void);
-int	ft_isdigit(char c);
-int	ft_issign(char c);
-int	ft_atoi(const char *nptr);
+int					ft_error(void);
+int					ft_isdigit(char c);
+int					ft_issign(char c);
+int					ft_atoi(const char *nptr);
 
+/* check_argv_utils2 */
+
+size_t				ft_strlen(const char *str);
+void				*ft_calloc(size_t nmemb, size_t size);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				**ft_split(char const *s, char c);
 
 #endif

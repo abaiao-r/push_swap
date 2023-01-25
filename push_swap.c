@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/24 17:03:20 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/01/25 16:32:22 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 int	main(int argc, char **argv)
 {
-	int i;
 	t_stack *stack_a;
 	t_stack *stack_b;
 
+
     if (argc < 2)
         return (ft_error());
-    if (!check_argv))
+    if (!check_argv)
         ft_error();
 	stack_b = NULL; 
 	stack_a = ft_create_stack(argc, argv);

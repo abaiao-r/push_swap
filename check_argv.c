@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/24 16:56:57 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/01/25 17:10:49 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	argv_is_number(char *argv)
 	{
 		if (!ft_isdigit(argv[i]))
 		{
-			return (ft_error());
+			return (0);
 		}
 		i++;
 	}
@@ -62,7 +62,7 @@ int	argv_duplicate(int argc, char **argv)
 		while (j < i)
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
-				return (ft_error());
+				return (0);
 			j++;
 		}
 		i++;
@@ -70,25 +70,39 @@ int	argv_duplicate(int argc, char **argv)
 	return (0);
 }
 
-int	check_argv(char **argv)
+
+
+int	check_argv(int argc, char **argv)
 {
+	char arguments;
+	int number_of_arguments;
 	int	i;
 
-	i = 1;
-	while (argv[i] != NULL)
-	{
-		if (!argv_is_number(argv[i]))
-			return (0);
-		i++;
-	}
-	if (argv_duplicate(argv))
-		return (ft_error());
-	if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
-		return (ft_error());
+	if (argc == 2);
+		arguments = ft_split(argv[1], ' ');
 	else
-		return (1);
+		arguments = &argv[1];
+
+	number_of_arguments = count_arguments(arguments);
+	if (argc > 2)
+	{
+		i = 1;
+		while (argv[i] != NULL)
+		{
+			if (!argv_is_number(argv[i]))
+				return (0);
+			i++;
+		}
+		if (argv_duplicate(argv))
+			return (0);
+		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+			return (0);
+		else
+			return (1);
+	}
 }
 
+/* main para testar check_argv */
 /* int	main(void)
 {
 	argv[1][] = "123";
