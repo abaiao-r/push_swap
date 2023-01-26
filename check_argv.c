@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/25 17:10:49 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/01/26 20:56:43 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	argv_is_number(char *argv)
 	int	i;
 	int	i;
 	int	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	if (ft_issign(argv[i]))
@@ -47,19 +49,18 @@ int	argv_is_number(char *argv)
 	else
 		return (1);
 } */
-
 /* Função para verificar se há argv duplicados. 
 (PS: para testar de forma isolada basta substituir argv_duplicate por main) */
-int	argv_duplicate(int argc, char **argv)
+int	argv_duplicate(char **argv)
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	while (i < argc)
+	while (argv[i])
 	{
-		j = 1;
-		while (j < i)
+		j = i + 1;
+		while (argv[j])
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				return (0);
@@ -70,36 +71,23 @@ int	argv_duplicate(int argc, char **argv)
 	return (0);
 }
 
-
-
-int	check_argv(int argc, char **argv)
+int	check_argv(char **argv)
 {
-	char arguments;
-	int number_of_arguments;
 	int	i;
 
-	if (argc == 2);
-		arguments = ft_split(argv[1], ' ');
-	else
-		arguments = &argv[1];
-
-	number_of_arguments = count_arguments(arguments);
-	if (argc > 2)
+	i = 1;
+	while (argv[i] != NULL)
 	{
-		i = 1;
-		while (argv[i] != NULL)
-		{
-			if (!argv_is_number(argv[i]))
-				return (0);
-			i++;
-		}
-		if (argv_duplicate(argv))
+		if (!argv_is_number(argv[i]))
 			return (0);
-		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
-			return (0);
-		else
-			return (1);
+		i++;
 	}
+	if (argv_duplicate(argv))
+		return (0);
+	if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+		return (0);
+	else
+		return (1);
 }
 
 /* main para testar check_argv */

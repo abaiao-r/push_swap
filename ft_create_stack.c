@@ -3,44 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/25 17:12:49 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/01/26 20:59:16 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_create_stack((char **argv))
+t_stack	*ft_create_stack(char **argv)
 {
-	
+	int		number;
+	int		i;
+	t_stack	*stack_a;
+
+	i = 1;
+	number = 0;
+	while (argv[i] != 0)
+	{
+		number = ft_atoi(argv[i]);
+		if (i == 1)
+		{
+			stack_a = ft_lstnew(number);
+		}
+		else
+		{
+			ft_lstadd_back(&stack_a, ft_lstnew(number));
+		}
+		i++;
+	}
+	return (stack_a);
 }
 
-
-
-/* t_stack	*ft_create_stack(int argc, char **argv)
+/* main para testar a criacao do stack a; */
+/* int	main(int argc, char **argv)
 {
-	t_stack *stack_a;
-	long int index_node;
-	int i;
+	t_stack	*stack_a;
 
-    stack_a = (t_stack *)malloc(sizeof(t_stack));
-	if(!stack_a)
-	{
-		return (NULL);
-	}
-	stack_a->number = long long int number;
-	stack_a->next = NULL;
-	stack_a->previous = NULL;
-	return (stack_a);
-    i = 0;
-	while (i < argc)
-	{
-		index_node = ft_atoi(argv[i]);
-        ft_lstadd_back (stack_a, t_stack_);
-        i++;
-	}
+	(void)argc;
 
-	return (stack_a);
+	stack_a = ft_create_stack(argv);
+	while (stack_a)
+	{
+		printf("%d", stack_a->number);
+		stack_a = stack_a->next;
+	}
 } */
