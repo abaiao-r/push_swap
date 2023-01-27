@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/26 20:56:43 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/01/27 14:38:22 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ int	argv_is_number(char *argv)
 /* int	argv_iszero(char *argv)
 {
 	int	i;
-	int	i;
-	int	j;
-	int	i;
-	int	j;
 
 	i = 0;
 	if (ft_issign(argv[i]))

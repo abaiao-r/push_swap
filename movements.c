@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   movements.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/27 15:50:54 by abaiao-r         ###   ########.fr       */
+/*   Created: 2023/01/27 16:12:33 by abaiao-r          #+#    #+#             */
+/*   Updated: 2023/01/27 19:20:09 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+/* sa (swap_a) */
+void    swap_a(t_stack *stack_a)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+    int temp;
 
-	if (argc < 2)
-		return (ft_error());
-	if (!check_argv(argv))
-		ft_error();
-	stack_b = NULL;
-	stack_a = ft_create_stack(argv);
+    if (stack_a == NULL || stack_a ->next == NULL)
+        return ;
+        
+    temp = stack_a
 }

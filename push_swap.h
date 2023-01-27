@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/26 20:09:55 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/01/27 14:35:41 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
 
 typedef struct s_list
 {
-	int	number;
+	int				number;
 	struct s_list	*next;
 	struct s_list	*previous;
 }					t_stack;
@@ -49,10 +49,10 @@ char				**ft_split(char const *s, char c);
 
 /* ft_create_stack && ft_create_stack_utils.c */
 
-t_stack			*ft_create_stack(char **argv);
-t_stack			*ft_lstnew(int nbr);
-void			ft_lstadd_back(t_stack **lst, t_stack *new);
-t_stack			*ft_lstlast(t_stack *lst);
-void			ft_lstclear(t_stack **lst, void (*del)(void*));
+t_stack				*ft_create_stack(char **argv);
+t_stack				*ft_lstnew(int nbr);
+void				ft_lstadd_back(t_stack **lst, t_stack *new);
+t_stack				*ft_lstlast(t_stack *lst);
+void				ft_lstclear(t_stack **lst, void (*del)(void *));
 
 #endif
