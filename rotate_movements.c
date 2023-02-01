@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_movements.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:46:41 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/31 14:57:23 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 18:28:01 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	rotate(t_stack *stack)
 
 	if (stack == NULL || stack->next == NULL)
 		return ;
-	temp = *stack;
+	temp = stack;
 	*stack = *stack->next;
 	ft_lstlast(stack)->next = temp;
 	temp->next = NULL;

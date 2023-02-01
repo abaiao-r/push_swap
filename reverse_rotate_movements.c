@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate_movements.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:41:22 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/31 14:36:45 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 18:25:21 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ void	reverse_rotation(t_stack **stack)
 void	reverse_rotation_a(t_stack **stack_a)
 {
 	reverse_rotation(stack_a);
-	write(1, "rra\n, 4");
+	write(1, "rra\n", 4);
 }
 
 void	reverse_rotation_b(t_stack **stack_b)
 {
 	reverse_rotation(stack_b);
-	write(1, "rrb\n, 4");
+	write(1, "rrb\n", 4);
 }
 
 void	reverse_rotation_r(t_stack **stack_a, t_stack **stack_b)
 {
 	reverse_rotation(stack_a);
 	reverse_rotation(stack_b);
-	write(1, "rrr\n, 4");
+	write(1, "rrr\n", 4);
 }

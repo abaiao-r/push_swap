@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   swap_movements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:12:33 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/31 18:29:30 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 18:58:54 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* s (swap_*) */
-void	swap(t_stack **stack)
+void	swap(t_stack *stack)
 {
 	int	temp;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/31 18:30:54 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 18:52:16 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void				ft_lstadd_front(t_stack **lst, t_stack *new);
 
 /* movements */
 /* swap_movements */
-void				swap(t_stack **stack);
+void				swap(t_stack *stack);
 void				swap_a(t_stack **stack_a);
 void				swap_b(t_stack **stack_b);
 void				swap_s(t_stack **stack_a, t_stack **stack_b);

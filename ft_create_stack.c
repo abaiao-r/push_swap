@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/31 18:57:35 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 18:00:35 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,20 @@ t_stack	*ft_create_stack(char **argv)
 }
 
 /* main para testar a criacao do stack a; */
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 
 	(void)argc;
 	if (argc < 2)
+		return (0);
+	if (!check_argv(argv))
 		return (ft_error());
-	/* if (!check_argv(argv))
-		return (ft_error()); */
 	stack_a = ft_create_stack(argv);
 	while (stack_a)
 	{
 		printf("%d\n", stack_a->number);
 		stack_a = stack_a->next;
 	}
-	swap(stack_a);
-}
+	swap_a(&stack_a);
+} */

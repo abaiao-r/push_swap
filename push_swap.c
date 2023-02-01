@@ -6,13 +6,13 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/27 15:50:54 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/01 18:51:14 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
@@ -23,4 +23,23 @@ int	main(int argc, char **argv)
 		ft_error();
 	stack_b = NULL;
 	stack_a = ft_create_stack(argv);
+} */
+
+/* main para testar a criacao do stack a; */
+int	main(int argc, char **argv)
+{
+	t_stack	*stack_a;
+
+	(void)argc;
+	if (argc < 2)
+		return (0);
+	if (!check_argv(argv))
+		return (ft_error());
+	stack_a = ft_create_stack(argv);
+	while (stack_a)
+	{
+		printf("%d\n", stack_a->number);
+		stack_a = stack_a->next;
+	}
+	swap_a(&stack_a);
 }

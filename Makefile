@@ -6,13 +6,23 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/01/21 16:26:33 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/01 18:51:24 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap.a
 
-SRC = 
+SRC = check_argv_utils.c \
+		check_argv_utils2.c \
+		check_argv.c \
+		ft_create_stack.c \
+		ft_create_stack_utils.c \
+ 		ft_create_stack_utils2.c \
+		push_movements.c \
+		push_swap.c \
+		reverse_rotate_movements.c \
+		rotate_movements.c \
+		swap_movements.c \
 
 LIB = push_swap.h
 
@@ -44,3 +54,5 @@ re: fclean $(NAME)
 
 fclean:	clean
 				$(RM) $(NAME) main
+				
+.PHONY: all clean fclean re bonus run

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/31 17:57:48 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/01 17:42:56 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	argv_duplicate(char **argv)
 		while (argv[j])
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
-				return (0);
+				return (1);
 			j++;
 		}
 		i++;
@@ -76,6 +76,25 @@ int	check_argv(char **argv)
 	{
 		if (!argv_is_number(argv[i]))
 			return (0);
+		if (argv_duplicate(argv))
+			return (0);
+		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+/* Legacy code */
+/* int	check_argv(char **argv)
+{
+	int	i;
+
+	i = 1;
+	while (argv[i] != NULL)
+	{
+		if (!argv_is_number(argv[i]))
+			return (0);
 		i++;
 	}
 	if (argv_duplicate(argv))
@@ -84,7 +103,7 @@ int	check_argv(char **argv)
 		return (0);
 	else
 		return (1);
-}
+} */
 
 /* main para testar check_argv */
 /* int	main(void)
