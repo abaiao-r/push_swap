@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack_utils.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:54:56 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/01/26 20:52:37 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:41:17 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,13 @@ void	ft_lstclear(t_stack **lst, void (*del)(void *))
 		free(*lst);
 		*lst = temp;
 	}
+}
+
+t_stack	*ft_lst_before_last(t_stack *lst)
+{
+	while (lst && lst->next && lst->next->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
