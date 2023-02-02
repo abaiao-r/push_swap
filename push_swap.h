@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 15:41:04 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 19:54:10 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void				print_stack(t_stack *stack);
 int					argv_is_number(char *argv);
 int					argv_iszero(char *argv);
 int					argv_duplicate(char **argv);
+int					argv_is_int(char **argv);
 int					check_argv(char **argv);
 
 /* check_argv_utils */

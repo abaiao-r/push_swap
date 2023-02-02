@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 14:41:50 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 19:54:27 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,24 @@ int	argv_duplicate(char **argv)
 	return (0);
 }
 
+int	argv_is_int(char **argv)
+{
+	int	i;
+	int	len_argv;
+
+	i = 0;
+	len_argv = ft_strlen(argv[i]);
+	while (argv[i] != NULL)
+	{
+		if (len_argv > 10)
+			return (0);
+		if (ft_atoll(argv[i]) > 2147483647 || ft_atoll(argv[i]) < -2147483648)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	check_argv(char **argv)
 {
 	int	i;
@@ -78,7 +96,7 @@ int	check_argv(char **argv)
 			return (0);
 		if (argv_duplicate(argv))
 			return (0);
-		if (ft_atoll(argv[i]) > 2147483647 || ft_atoll(argv[i]) < -2147483648)
+		if (!argv_is_int(argv))
 			return (0);
 		i++;
 	}
