@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 14:36:57 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/01 18:26:50 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:28:50 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	push(t_stack **stack_source, t_stack **stack_destination)
 		return ;
 	temp = *stack_source;
 	(*stack_source) = (*stack_source)->next;
+	temp->next = NULL;
 	ft_lstadd_front(stack_destination, temp);
 }
 

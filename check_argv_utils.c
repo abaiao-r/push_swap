@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:47:25 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/24 15:34:52 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/02 14:43:30 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	ft_issign(char c)
 		return (0);
 }
 
-int	ft_atoi(const char *nptr)
+long long	ft_atoll(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int			i;
+	long long	sign;
+	long long	result;
 
 	i = 0;
 	sign = 1;

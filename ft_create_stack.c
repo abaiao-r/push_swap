@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/01 18:00:35 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:41:50 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_stack	*ft_create_stack(char **argv)
 	number = 0;
 	while (argv[i] != 0)
 	{
-		number = ft_atoi(argv[i]);
+		number = ft_atoll(argv[i]);
 		if (i == 1)
 		{
 			stack_a = ft_lstnew(number);

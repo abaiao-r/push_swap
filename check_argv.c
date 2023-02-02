@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/01 17:42:56 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:41:50 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	argv_duplicate(char **argv)
 		j = i + 1;
 		while (argv[j])
 		{
-			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
+			if (ft_atoll(argv[i]) == ft_atoll(argv[j]))
 				return (1);
 			j++;
 		}
@@ -78,7 +78,7 @@ int	check_argv(char **argv)
 			return (0);
 		if (argv_duplicate(argv))
 			return (0);
-		if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+		if (ft_atoll(argv[i]) > 2147483647 || ft_atoll(argv[i]) < -2147483648)
 			return (0);
 		i++;
 	}
@@ -99,7 +99,7 @@ int	check_argv(char **argv)
 	}
 	if (argv_duplicate(argv))
 		return (0);
-	if (ft_atoi(argv[i]) > INT_MAX || ft_atoi(argv[i]) < INT_MIN)
+	if (ft_atoll(argv[i]) > INT_MAX || ft_atoll(argv[i]) < INT_MIN)
 		return (0);
 	else
 		return (1);

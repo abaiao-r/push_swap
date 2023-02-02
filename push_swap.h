@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/01 19:14:31 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/02 15:41:04 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ typedef struct s_list
 	struct s_list	*previous;
 }					t_stack;
 
+/* 8 */
+
+void				print_stack(t_stack *stack);
+
 /* check_argv */
 
 int					argv_is_number(char *argv);
@@ -38,10 +42,9 @@ int					check_argv(char **argv);
 int					ft_error(void);
 int					ft_isdigit(char c);
 int					ft_issign(char c);
-int					ft_atoi(const char *nptr);
+long long			ft_atoll(const char *nptr);
 
 /* check_argv_utils2 */
-
 size_t				ft_strlen(const char *str);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -65,8 +68,8 @@ void				swap_b(t_stack **stack_b);
 void				swap_s(t_stack **stack_a, t_stack **stack_b);
 
 /* rotate_movements */
-void				rotate(t_stack *stack);
-void				rotate_a(t_stack *stack_a);
+void				rotate(t_stack **stack);
+void				rotate_a(t_stack **stack_a);
 void				rotate_b(t_stack *stack_b);
 void				rotate_r(t_stack *stack_a, t_stack *stack_b);
 
