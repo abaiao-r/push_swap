@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/02 16:29:57 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/03 12:19:19 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	t_stack *stack_a1;
-	t_stack *stack_b;
+	t_stack	*stack_a1;
+	t_stack	*stack_b;
 
 	(void)argc;
 	if (argc < 2)
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 
 }
 
-void print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
 	while (stack)
 	{

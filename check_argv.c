@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 19:54:27 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/03 12:32:54 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	argv_is_int(char **argv)
 	int	i;
 	int	len_argv;
 
-	i = 0;
+	i = 1;
 	len_argv = ft_strlen(argv[i]);
 	while (argv[i] != NULL)
 	{

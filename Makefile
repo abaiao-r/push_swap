@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/02 15:27:22 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/03 12:19:16 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,8 @@ $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
 run: 
-	$(CC) $(CFLAGS) $(NAME) -o main
-	./main
+	$(CC) $(CFLAGS) $(NAME) -o push_swap
+	./push_swap
 	
 clean:	
 			$(RM) $(OBJS)
@@ -53,6 +53,6 @@ clean:
 re: fclean $(NAME)
 
 fclean:	clean
-				$(RM) $(NAME) main
+				$(RM) $(NAME) push_swap
 				
 .PHONY: all clean fclean re bonus run
