@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/03 12:32:54 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 20:02:39 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	argv_duplicate(char **argv)
 		j = i + 1;
 		while (argv[j])
 		{
-			if (ft_atoll(argv[i]) == ft_atoll(argv[j]))
+			if (ft_atol(argv[i]) == ft_atol(argv[j]))
 				return (1);
 			j++;
 		}
@@ -78,7 +78,7 @@ int	argv_is_int(char **argv)
 	{
 		if (len_argv > 10)
 			return (0);
-		if (ft_atoll(argv[i]) > 2147483647 || ft_atoll(argv[i]) < -2147483648)
+		if (ft_atol(argv[i]) > 2147483647 || ft_atol(argv[i]) < -2147483648)
 			return (0);
 		i++;
 	}
