@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 19:54:10 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/04 17:25:46 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int					check_argv(char **argv);
 int					ft_error(void);
 int					ft_isdigit(char c);
 int					ft_issign(char c);
-long long			ft_atoll(const char *nptr);
+long long			ft_atol(const char *nptr);
 
 /* check_argv_utils2 */
 size_t				ft_strlen(const char *str);
@@ -60,18 +60,15 @@ t_stack				*ft_lstlast(t_stack *lst);
 void				ft_lstclear(t_stack **lst, void (*del)(void *));
 t_stack				*ft_lst_before_last(t_stack *lst);
 void				ft_lstadd_front(t_stack **lst, t_stack *new);
+int					ft_lstsize(t_stack *lst);
 
 /* movements */
 /* swap_movements */
 void				swap(t_stack *stack);
 void				swap_a(t_stack **stack_a);
 void				swap_b(t_stack **stack_b);
-void				swap_s(t_stack **stack_a, t_stack **stack_b);
-
-/* rotate_movements */
-void				rotate(t_stack **stack);
-void				rotate_a(t_stack **stack_a);
-void				rotate_b(t_stack *stack_b);
+void	swap_s(t_stack **stack_a, t_svoid	sort_stack(t_stack **stack_a,
+				t_stack **stack_b)
 void				rotate_r(t_stack *stack_a, t_stack *stack_b);
 
 /* reverse_rotate_movements */
@@ -84,5 +81,11 @@ void				reverse_rotation_r(t_stack **stack_a, t_stack **stack_b);
 void				push(t_stack **stack_source, t_stack **stack_destination);
 void				push_a(t_stack **stack_a, t_stack **stack_b);
 void				push_b(t_stack **stack_a, t_stack **stack_b);
+
+/* sort_stack */
+void				sort_stack_3(t_stack **stack_a, t_stack **stack_b);
+void				sort_stack_2(t_stack **stack_a, t_stack **stack_b);
+int					check_sorted(t_stack **stack_a);
+void				sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 #endif

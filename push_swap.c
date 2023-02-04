@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/03 12:19:19 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:32:43 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 	t_stack	*stack_b;
 
 	if (argc < 2)
-		return (ft_error());
+		return (0);
 	if (!check_argv(argv))
-		ft_error();
+		return (ft_error());
 	stack_b = NULL;
 	stack_a = ft_create_stack(argv);
+	sort_stack(stack_a, stack_b);
 } */
 
 /* main para testar a criacao do stack a; */
@@ -48,6 +49,7 @@ int	main(int argc, char **argv)
 	}
 	push_b(&stack_a1, &stack_b);
 	push_b(&stack_a1, &stack_b);
+	swap_b(&stack_b);
 	print_stack(stack_b);
 
 }

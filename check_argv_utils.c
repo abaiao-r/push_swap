@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:47:25 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 14:43:30 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 17:25:39 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	ft_issign(char c)
 		return (0);
 }
 
-long long	ft_atoll(const char *nptr)
+long long	ft_atol(const char *nptr)
 {
-	int			i;
-	long long	sign;
-	long long	result;
+	int		i;
+	long	sign;
+	long	result;
 
 	i = 0;
 	sign = 1;
