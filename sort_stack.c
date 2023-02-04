@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/04 17:28:54 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 19:57:22 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,35 @@
 
 void	sort_stack_3(t_stack **stack_a, t_stack **stack_b)
 {
+	int	a;
+	int	b;
+	int	c;
 
+	a = (*stack_a)->number;
+	b = (*stack_a)->next->number;
+	c = (*stack_a)->next->next->number;
+	if (a > b && c < a)
+	{
+		swap_a(&stack_a);
+		rotate_a(&stack_a);
+	}
+	else if (a > b && c > a)
+		swap_a(&stack_a);
+	else if (b > a && a > c)
+		reverse_rotation_a(&stack_a);
+	else if (a > b && b < c)
+		rotate_a(&stack_a);
+	else if (a > b && b > c)
+	{
+		swap_a(&stack_a);
+		reverse_rotation_a(&stack_a);
+	}
 }
 
 void	sort_stack_2(t_stack **stack_a, t_stack **stack_b)
 {
 	if ((*stack_a)->number > (*stack_a)->next->number)
-		swap_a(stack_a);
+		swap_a(&stack_a);
 }
 
 int	check_sorted(t_stack **stack_a)

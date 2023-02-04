@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/04 17:25:46 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 19:57:40 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,12 @@ int					ft_lstsize(t_stack *lst);
 void				swap(t_stack *stack);
 void				swap_a(t_stack **stack_a);
 void				swap_b(t_stack **stack_b);
-void	swap_s(t_stack **stack_a, t_svoid	sort_stack(t_stack **stack_a,
-				t_stack **stack_b)
+void	swap_s(t_stack **stack_a, t_stack **stack_b);
+
+/* rotate_movements */
+void				rotate(t_stack **stack);
+void				rotate_a(t_stack **stack_a);
+void				rotate_b(t_stack *stack_b);
 void				rotate_r(t_stack *stack_a, t_stack *stack_b);
 
 /* reverse_rotate_movements */
