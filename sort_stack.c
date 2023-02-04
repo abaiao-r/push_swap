@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/04 17:26:14 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/04 17:28:54 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort_stack_3(t_stack **stack_a, t_stack **stack_b)
 {
-    
+
 }
 
 void	sort_stack_2(t_stack **stack_a, t_stack **stack_b)
