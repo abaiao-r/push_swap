@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 15:59:29 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/06 16:17:18 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,11 @@ void				push_a(t_stack **stack_a, t_stack **stack_b);
 void				push_b(t_stack **stack_a, t_stack **stack_b);
 
 /* sort_stack && sort_stack2*/
+void				sort_stack_n(t_stack **stack_a, t_stack **stack_b);
 void				sort_stack_5(t_stack **stack_a, t_stack **stack_b);
 void				sort_stack_4(t_stack **stack_a, t_stack **stack_b);
 void				sort_stack_3(t_stack **stack_a, t_stack **stack_b);
-void				sort_stack_2(t_stack **stack_a, t_stack **stack_b);
+void				sort_stack_2(t_stack **stack_a);
 void				sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 /* sort_stack_aux */

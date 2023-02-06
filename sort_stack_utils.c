@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:23:32 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 15:46:20 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/06 17:05:28 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 int	find_lowest_number(t_stack *stack)
 {
-	int		i;
-	t_stack	*temp;
+	int	i;
 
-	temp = stack;
 	i = stack->number;
 	while (stack)
 	{
@@ -30,11 +28,14 @@ int	find_lowest_number(t_stack *stack)
 
 int	check_sorted(t_stack **stack_a)
 {
+	t_stack	*temp;
+
+	temp = (*stack_a);
 	while ((*stack_a)->next != NULL)
 	{
 		if ((*stack_a)->number > (*stack_a)->next->number)
 			return (0);
-		else
-			return (1);
+		temp = temp->next;
 	}
+	return (1);
 }

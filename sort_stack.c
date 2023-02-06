@@ -6,18 +6,18 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/06 16:03:12 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/06 23:16:31 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
+/* void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 {
 	int	lowest_number;
 
-	lowest_number = find_lowest_number(&stack_a);
-	if ((*stack_a != lowest_number))
+	lowest_number = find_lowest_number(*stack_a);
+	if ((*stack_a)->number != lowest_number)
 	{
 		rotate_a(&stack_a);
 	}
@@ -31,7 +31,7 @@ void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
 {
 	int	lowest_number;
 
-	lowest_number = find_lowest_number(&stack_a);
+	lowest_number = find_lowest_number(*stack_a);
 	if ((*stack_a != lowest_number))
 	{
 		rotate_a(&stack_a);
@@ -67,26 +67,27 @@ void	sort_stack_3(t_stack **stack_a, t_stack **stack_b)
 		swap_a(&stack_a);
 		reverse_rotation_a(&stack_a);
 	}
-}
+} */
 
-void	sort_stack_2(t_stack **stack_a, t_stack **stack_b)
+void	sort_stack_2(t_stack **stack_a)
 {
 	if ((*stack_a)->number > (*stack_a)->next->number)
-		swap_a(&stack_a);
+		swap_a(stack_a);
 }
 
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
+	(void) (*stack_b);
 	if (check_sorted(stack_a))
 		return ;
 	if (ft_lstsize(*stack_a) == 2)
-		sort_stack_2(stack_a, stack_b);
-	else if (ft_lstsize(*stack_a) == 3)
+		sort_stack_2(stack_a);
+/* 	else if (ft_lstsize(*stack_a) == 3)
 		sort_stack_3(stack_a, stack_b);
 	else if (ft_lstsize(*stack_a) == 4)
 		sort_stack_4(stack_a, stack_b);
 	else if (ft_lstsize(*stack_a) == 5)
 		sort_stack_5(stack_a, stack_b);
 	else
-		sort_stack_n(stack_a, stack_b);
+		sort_stack_n(stack_a, stack_b); */
 }
