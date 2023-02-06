@@ -6,7 +6,7 @@
 #    By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/06 14:51:13 by andrefranci      ###   ########.fr        #
+#    Updated: 2023/02/06 15:25:21 by andrefranci      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,10 @@ SRC = 	check_argv_utils.c \
 		push_swap.c \
 		reverse_rotate_movements.c \
 		rotate_movements.c \
-		swap_movements.c
+		swap_movements.c \
+		sort_stack.c \
+		sort_stack2.c \
+		sort_stack_utils.c
 
 LIB = push_swap.h
 
