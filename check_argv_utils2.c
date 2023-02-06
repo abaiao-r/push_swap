@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv_utils2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 13:04:08 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/01/26 20:51:18 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:51:37 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

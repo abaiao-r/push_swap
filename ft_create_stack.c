@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/04 20:02:54 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:51:33 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

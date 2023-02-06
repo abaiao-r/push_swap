@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_movements.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 11:46:41 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/02 15:46:06 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:51:28 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

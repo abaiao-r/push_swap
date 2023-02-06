@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate_movements.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:41:22 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/01 18:25:21 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:51:29 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
