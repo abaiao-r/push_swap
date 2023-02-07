@@ -6,41 +6,54 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/07 14:01:29 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:27:54 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
+void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 {
 	int	lowest_number;
 
 	lowest_number = find_lowest_number(*stack_a);
-	if ((*stack_a)->number != lowest_number)
+	while ((*stack_a)->number != lowest_number)
 	{
-		rotate_a(&stack_a);
+		rotate_a(stack_a);
 	}
-	else
-		push_b(&stack_a, &stack_b);
+	push_b(stack_a, stack_b);
 	sort_stack_4(stack_a, stack_b);
-	push_a(&stack_a, &stack_b);
+	push_a(stack_a, stack_b);
 }
 
 void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
 {
-	int	lowest_number;
+/* 	int	lowest_number;
+	int	distance_top;
+	int	stack_size;
 
 	lowest_number = find_lowest_number(*stack_a);
-	if ((*stack_a != lowest_number))
+	distance_top = find_distance_top(*stack_a, lowest_number);
+	stack_size = ft_lstsize(*stack_a);
+	if (distance_top <= stack_size / 2)
 	{
-		rotate_a(&stack_a);
+		while ((*stack_a)->number != lowest_number)
+		{
+			rotate_a(stack_a);
+		}
 	}
-	else
-		push_b(&stack_a, &stack_b);
-	sort_stack_3(stack_a, stack_b);
-	push_a(&stack_a, &stack_b);
-} */
+	else if (distance_top >= stack_size / 2)
+	{
+		while ((*stack_a)->number != lowest_number)
+		{
+			reverse_rotation_a(stack_a);
+		}
+	} */
+	rotate_to_lowest_number(*stack_a);
+	push_b(stack_a, stack_b);
+	sort_stack_3(stack_a);
+	push_a(stack_a, stack_b);
+}
 
 void	sort_stack_3(t_stack **stack_a)
 {
@@ -77,17 +90,17 @@ void	sort_stack_2(t_stack **stack_a)
 
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	(void) (*stack_b);
+	(void)(*stack_b);
 	if (check_sorted(stack_a))
 		return ;
 	if (ft_lstsize(*stack_a) == 2)
 		sort_stack_2(stack_a);
 	else if (ft_lstsize(*stack_a) == 3)
 		sort_stack_3(stack_a);
-/* 	else if (ft_lstsize(*stack_a) == 4)
+	else if (ft_lstsize(*stack_a) == 4)
 		sort_stack_4(stack_a, stack_b);
 	else if (ft_lstsize(*stack_a) == 5)
 		sort_stack_5(stack_a, stack_b);
-	else
+	/* else
 		sort_stack_n(stack_a, stack_b); */
 }

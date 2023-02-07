@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_movements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 14:36:57 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 14:51:32 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/07 15:51:21 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ void	push(t_stack **stack_source, t_stack **stack_destination)
 
 	if (stack_source == NULL)
 		return ;
-	temp = *stack_source;
+	temp = (*stack_source);
 	(*stack_source) = (*stack_source)->next;
-	temp->next = NULL;
 	ft_lstadd_front(stack_destination, temp);
 }
 

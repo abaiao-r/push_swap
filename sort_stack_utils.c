@@ -6,11 +6,54 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:23:32 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/07 13:59:44 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:24:16 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_stack	*rotate_to_lowest_number(t_stack *stack_a)
+{
+	int	lowest_number;
+	int	distance_top;
+	int	stack_size;
+
+	lowest_number = find_lowest_number(stack_a);
+	distance_top = find_distance_top(stack_a, lowest_number);
+	stack_size = ft_lstsize(stack_a);
+	if (distance_top <= stack_size / 2)
+	{
+		while (stack_a->number != lowest_number)
+		{
+			rotate_a(&stack_a);
+		}
+	}
+	else if (distance_top >= stack_size / 2)
+	{
+		while (stack_a->number != lowest_number)
+		{
+			reverse_rotation_a(&stack_a);
+		}
+	}
+	return (stack_a);
+}
+
+int	find_distance_top(t_stack *stack, int i)
+{
+	int	j;
+
+	j = 0;
+	if (!stack)
+	{
+		return (0);
+	}
+	while (stack->number != i)
+	{
+		stack = stack->next;
+		j++;
+	}
+	return (j);
+}
 
 int	find_lowest_number(t_stack *stack)
 {

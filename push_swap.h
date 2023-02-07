@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/07 13:08:31 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:02:15 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,8 @@ void				sort_stack_2(t_stack **stack_a);
 void				sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 /* sort_stack_aux */
-
+t_stack				*rotate_to_lowest_number(t_stack *stack_a);
+int					find_distance_top(t_stack *stack, int i);
 int					find_lowest_number(t_stack *stack);
 int					check_sorted(t_stack **stack_a);
-
-
 #endif
