@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/06 16:29:32 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/07 13:06:40 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	/* t_stack	*stack_a1; */
 	t_stack	*stack_b;
 
 	(void)argc;
@@ -41,26 +40,20 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	stack_a = ft_create_stack(argv);
 	/* stack_a1 = stack_a; */
-
-	while (stack_a)
-	{
-		printf("%d\n\n", stack_a->number);
-		stack_a = stack_a->next;
-	}
+	print_stack(stack_a);
 	sort_stack(&stack_a, &stack_b);
+	print_stack(stack_a);
 	/* push_b(&stack_a1, &stack_b);
 	push_b(&stack_a1, &stack_b);
 	swap_b(&stack_b);
 	rotate_a(&stack_a1); */
-	print_stack(stack_a);
-
 }
 
 void	print_stack(t_stack *stack)
 {
 	while (stack)
 	{
-		printf("\n%d\n\n", stack->number);
+		printf("\n%d\n", stack->number);
 		stack = stack->next;
 	}
 }

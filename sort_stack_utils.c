@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:23:32 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 17:05:28 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/07 13:59:44 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	check_sorted(t_stack **stack_a)
 	t_stack	*temp;
 
 	temp = (*stack_a);
-	while ((*stack_a)->next != NULL)
+	while (temp)
 	{
-		if ((*stack_a)->number > (*stack_a)->next->number)
+		if (temp->number > temp->next->number)
 			return (0);
 		temp = temp->next;
 	}

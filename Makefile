@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+         #
+#    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/06 15:25:21 by andrefranci      ###   ########.fr        #
+#    Updated: 2023/02/07 11:53:53 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
 run: 
-	$(CC) $(CFLAGS) $(NAME) -o push_swap
+	$(CC) $(CFLAGS) $(NAME) -o push_swap 
+#-fsanitize=address
 	./push_swap
 	
 clean:	
