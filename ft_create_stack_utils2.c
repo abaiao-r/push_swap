@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack_utils2.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:00:22 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 20:47:52 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/07 18:30:28 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstadd_front(t_stack **lst, t_stack *new)
 	if (!lst || !new)
 		return ;
 	if (*lst != NULL)
-	{
 		new->next = *lst;
-	}
+	else
+		new->next = NULL;
 	*lst = new;
 }
 

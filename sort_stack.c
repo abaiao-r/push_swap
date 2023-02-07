@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/07 17:27:54 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:31:58 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,7 @@
 
 void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 {
-	int	lowest_number;
-
-	lowest_number = find_lowest_number(*stack_a);
-	while ((*stack_a)->number != lowest_number)
-	{
-		rotate_a(stack_a);
-	}
+	*stack_a = rotate_to_lowest_number(*stack_a);
 	push_b(stack_a, stack_b);
 	sort_stack_4(stack_a, stack_b);
 	push_a(stack_a, stack_b);
@@ -28,28 +22,7 @@ void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
 {
-/* 	int	lowest_number;
-	int	distance_top;
-	int	stack_size;
-
-	lowest_number = find_lowest_number(*stack_a);
-	distance_top = find_distance_top(*stack_a, lowest_number);
-	stack_size = ft_lstsize(*stack_a);
-	if (distance_top <= stack_size / 2)
-	{
-		while ((*stack_a)->number != lowest_number)
-		{
-			rotate_a(stack_a);
-		}
-	}
-	else if (distance_top >= stack_size / 2)
-	{
-		while ((*stack_a)->number != lowest_number)
-		{
-			reverse_rotation_a(stack_a);
-		}
-	} */
-	rotate_to_lowest_number(*stack_a);
+	*stack_a = rotate_to_lowest_number(*stack_a);
 	push_b(stack_a, stack_b);
 	sort_stack_3(stack_a);
 	push_a(stack_a, stack_b);

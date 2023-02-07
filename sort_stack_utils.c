@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:23:32 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/07 17:24:16 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:13:27 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_stack	*rotate_to_lowest_number(t_stack *stack_a)
 	int	lowest_number;
 	int	distance_top;
 	int	stack_size;
-
+	
 	lowest_number = find_lowest_number(stack_a);
 	distance_top = find_distance_top(stack_a, lowest_number);
 	stack_size = ft_lstsize(stack_a);
