@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/07 18:31:58 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:54:17 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 		sort_stack_4(stack_a, stack_b);
 	else if (ft_lstsize(*stack_a) == 5)
 		sort_stack_5(stack_a, stack_b);
-	/* else
-		sort_stack_n(stack_a, stack_b); */
+	else
+		sort_stack_n(stack_a, stack_b);
 }
