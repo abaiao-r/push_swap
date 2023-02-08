@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/07 18:54:17 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:20:06 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 	*stack_a = rotate_to_lowest_number(*stack_a);
 	push_b(stack_a, stack_b);
 	sort_stack_4(stack_a, stack_b);
-	push_a(stack_a, stack_b);
+	push_a(stack_b, stack_a);
 }
 
 void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
@@ -25,7 +25,7 @@ void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
 	*stack_a = rotate_to_lowest_number(*stack_a);
 	push_b(stack_a, stack_b);
 	sort_stack_3(stack_a);
-	push_a(stack_a, stack_b);
+	push_a(stack_b, stack_a);
 }
 
 void	sort_stack_3(t_stack **stack_a)
