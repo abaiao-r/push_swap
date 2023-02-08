@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/08 19:13:22 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/08 21:53:17 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,6 @@ SRC = 	check_argv_utils.c \
 		sort_stack2.c \
 		sort_stack_utils.c \
 		sort_stack_utils2.c
-
-LIB = push_swap.h
-
-		
 
 
 OBJS = $(SRC:.c=.o)
