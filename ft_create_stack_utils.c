@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_stack_utils.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:54:56 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/06 14:51:35 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/08 18:57:58 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ t_stack	*ft_lstnew(int nbr)
 	}
 	connect->number = nbr;
 	connect->next = NULL;
-	connect->previous = NULL;
 	return (connect);
 }
 

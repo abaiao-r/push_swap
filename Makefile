@@ -6,11 +6,11 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/07 14:59:45 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/08 19:13:22 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 SRC = 	check_argv_utils.c \
 		check_argv_utils2.c \
@@ -25,7 +25,8 @@ SRC = 	check_argv_utils.c \
 		swap_movements.c \
 		sort_stack.c \
 		sort_stack2.c \
-		sort_stack_utils.c
+		sort_stack_utils.c \
+		sort_stack_utils2.c
 
 LIB = push_swap.h
 
@@ -41,20 +42,17 @@ CC= cc
 
 RM = rm -rf 
 
-all:	$(NAME)
+all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rcs $@ $^
-
-run: 
-	$(CC) $(CFLAGS) $(NAME) -o push_swap 
+$(NAME):
+	$(CC) $(CFLAGS) $(SRC) -o push_swap 
 #-fsanitize=address
 	./push_swap
 	
 clean:	
-			$(RM) $(OBJS)
+			$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
 fclean:	clean
 				$(RM) $(NAME) push_swap
