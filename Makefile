@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/08 21:53:17 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/08 22:49:10 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,19 +38,16 @@ CC= cc
 
 RM = rm -rf 
 
-all: $(NAME)
+$(NAME): $(OBJS)
+		$(CC) $(CFLAGS) $(SRC) -o $(NAME) -fsanitize=address
 
-$(NAME):
-	$(CC) $(CFLAGS) $(SRC) -o push_swap 
-#-fsanitize=address
-	./push_swap
+all: $(NAME)
 	
 clean:	
-			$(RM) $(NAME)
-
-re: fclean all
+			$(RM) $(OBJS)
 
 fclean:	clean
-				$(RM) $(NAME) push_swap
+				$(RM) $(NAME)
+re: fclean all
 				
 .PHONY: all clean fclean re bonus run
