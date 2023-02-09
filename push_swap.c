@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/09 14:26:17 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/09 14:40:49 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	main(int argc, char **argv)
 	stack_a = ft_create_stack(argv);
 	assign_ranks(&stack_a);
 	/* stack_a1 = stack_a; */
-	print_stack(stack_a);
+	/* print_stack(stack_a); */
 	sort_stack(&stack_a, &stack_b);
-	print_stack(stack_a);
+	/* print_stack(stack_a); */
 	/* push_b(&stack_a1, &stack_b);
 	push_b(&stack_a1, &stack_b);
 	swap_b(&stack_b);
