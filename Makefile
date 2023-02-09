@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
+#    By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/08 22:50:59 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/09 14:04:16 by andrefranci      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,13 @@ CC= cc
 
 RM = rm -rf 
 
+
+all: $(NAME)
+	
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) $(SRC) -o $(NAME) 
 #-fsanitize=address
 
-all: $(NAME)
-	
 clean:	
 			$(RM) $(OBJS)
 

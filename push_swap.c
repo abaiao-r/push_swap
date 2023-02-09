@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/08 18:57:30 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:26:17 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	print_stack(t_stack *stack)
 {
 	while (stack)
 	{
-		printf("\n%d\n%d\n", stack->number, stack->rank);
+		printf("\nNumber:%d Rank:%d\n", stack->number, stack->rank);
 		stack = stack->next;
 	}
 }
