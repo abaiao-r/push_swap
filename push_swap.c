@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 22:48:01 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 23:11:49 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 	ft_lstclear(&stack_b);
 }
 
+/* if you want to print stacks */
 /* void	print_stack(t_stack *stack)
 {
 	while (stack)

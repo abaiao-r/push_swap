@@ -6,12 +6,12 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:54:56 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 22:41:28 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 23:17:24 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/* Returns the last element of a list */
 t_stack	*ft_lstlast(t_stack *lst)
 {
 	if (!lst)
@@ -29,6 +29,7 @@ t_stack	*ft_lstlast(t_stack *lst)
 	return (lst);
 }
 
+/* Adds a element of a list to the back to of any list indicated. */
 void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
 	t_stack	*last;
@@ -48,6 +49,7 @@ void	ft_lstadd_back(t_stack **lst, t_stack *new)
 	return ;
 }
 
+/* creates a new list.  */
 t_stack	*ft_lstnew(int nbr)
 {
 	t_stack	*connect;
@@ -62,6 +64,7 @@ t_stack	*ft_lstnew(int nbr)
 	return (connect);
 }
 
+/*  */
 void	ft_lstclear(t_stack **lst)
 {
 	t_stack	*temp;
