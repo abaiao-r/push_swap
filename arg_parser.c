@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 20:55:17 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:51:30 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /* int	arguments_count(char **arguments_vector)
 {
-	int	i;
+	int		i;
+	char	**arguments_vector;
 
 	if (arguments_vector == NULL)
 		return (0);
@@ -25,11 +26,9 @@
 	}
 	return (i);
 } */
-
-char	**arg_parser(int argc, char **argv)
+/* char	**arg_parser(char **argv)
 {
 	char	**arguments_vector;
-	(void) argc;
 
 	arguments_vector = ft_split(argv[1], ' ');
 	return (arguments_vector);
@@ -53,11 +52,11 @@ static int	count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t i;
-	size_t j;
-	size_t start;
-	size_t count;
-	char **split;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+	size_t	count;
+	char	**split;
 
 	count = count_words((char *)s, c);
 	split = malloc(sizeof(char *) * (count + 1));
@@ -76,4 +75,4 @@ char	**ft_split(char const *s, char c)
 	}
 	split[count] = 0;
 	return (split);
-}
+} */

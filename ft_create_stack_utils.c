@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:54:56 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 19:24:42 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:41:28 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	ft_lstclear(t_stack **lst)
 	while (*lst)
 	{
 		temp = (*lst)->next;
+		free((*lst)->rank_binary);
 		free(*lst);
 		*lst = temp;
 	}
