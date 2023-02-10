@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:01:05 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 15:10:31 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:29:53 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	assign_ranks(t_stack **stack)
 	int		rank;
 
 	current = (*stack);
+	temp = (*stack);
 	while (current != NULL)
 	{
 		rank = 1;

@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 13:58:46 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:49:42 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,10 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	stack_a = ft_create_stack(argv);
 	assign_ranks(&stack_a);
-	/* stack_a1 = stack_a; */
 	print_stack(stack_a);
 	sort_stack(&stack_a, &stack_b);
+	/* swap_a(&stack_a); */
 	print_stack(stack_a);
-	/* push_b(&stack_a1, &stack_b);
-	push_b(&stack_a1, &stack_b);
-	swap_b(&stack_b);
-	rotate_a(&stack_a1); */
 }
 
 void	print_stack(t_stack *stack)

@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:30:03 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/10 16:28:59 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 19:05:07 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,30 @@
 
 void	sort_stack_n(t_stack **stack_a, t_stack **stack_b)
 {
-	/* int	i; */
+	int	i;
 	int	j;
+	int	len;
 
-	/* i = count_digits_binary(ft_lstsize(*stack_a)) - 1; */
-	j = 0;
-	while (!check_sorted(stack_a))
+	len = ft_lstsize(*stack_a);
+	i = count_digits_binary(ft_lstsize(*stack_a)) - 1;
+	while (i >= 0 && !check_sorted(stack_a))
 	{
-		if ((*stack_a)->rank_binary[j] == '1')
+		j = 0;
+		while (j < len)
 		{
-			rotate_a(stack_a);
+			if ((*stack_a)->rank_binary[i] == '1')
+				rotate_a(stack_a);
+			else
+				push_b(stack_a, stack_b);
+			j++;
 		}
-		else
-		{
-			push_b(stack_a, stack_b);
-		}
-		push_a(stack_b, stack_a);
-		j++;
+		while (*stack_b != NULL)
+			push_a(stack_b, stack_a);
+		i--;
 	}
 }
 
+/* code that works but is very unificient */
 /* void	sort_stack_n(t_stack **stack_a, t_stack **stack_b)
 {
 	int	stack_size;
