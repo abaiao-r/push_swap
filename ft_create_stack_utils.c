@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:54:56 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/08 18:57:58 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 19:24:42 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ t_stack	*ft_lstnew(int nbr)
 	return (connect);
 }
 
-void	ft_lstclear(t_stack **lst, void (*del)(void *))
+void	ft_lstclear(t_stack **lst)
 {
 	t_stack	*temp;
 
-	if (!lst || !*lst || !del)
+	if (!lst || !*lst)
 		return ;
 	while (*lst)
 	{

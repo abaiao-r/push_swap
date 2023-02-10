@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/10 16:51:38 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:15:34 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ typedef struct s_list
 /* 8 */
 
 void				print_stack(t_stack *stack);
+/* arg_parser */
+int					arguments_count(char **arguments_vector);
+char				**arg_parser(int argc, char **argv);
+char				**ft_split(char const *s, char c);
 
 /* check_argv */
 
@@ -51,7 +55,6 @@ long long			ft_atol(const char *nptr);
 size_t				ft_strlen(const char *str);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-char				**ft_split(char const *s, char c);
 
 /* ft_create_stack && ft_create_stack_utils.c && ft_create_stack_utils2.c*/
 
@@ -59,7 +62,7 @@ t_stack				*ft_create_stack(char **argv);
 t_stack				*ft_lstnew(int nbr);
 void				ft_lstadd_back(t_stack **lst, t_stack *new);
 t_stack				*ft_lstlast(t_stack *lst);
-void				ft_lstclear(t_stack **lst, void (*del)(void *));
+void				ft_lstclear(t_stack **lst);
 t_stack				*ft_lst_before_last(t_stack *lst);
 void				ft_lstadd_front(t_stack **lst, t_stack *new);
 int					ft_lstsize(t_stack *lst);

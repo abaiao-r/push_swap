@@ -6,13 +6,14 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/10 16:58:02 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/10 21:27:03 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC = 	check_argv_utils.c \
+SRC = 	arg_parser.c \
+		check_argv_utils.c \
 		check_argv_utils2.c \
 		check_argv.c \
 		ft_create_stack.c \
@@ -42,8 +43,7 @@ RM = rm -rf
 all: $(NAME)
 	
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $(SRC) -o $(NAME) 
-#-fsanitize=address
+		$(CC) $(CFLAGS) $(SRC) -o $(NAME) -fsanitize=address
 
 clean:	
 			$(RM) $(OBJS)

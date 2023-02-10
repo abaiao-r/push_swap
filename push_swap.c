@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 17:49:42 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 21:20:26 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,22 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	if (!check_argv(argv))
+	{
+		free(argv);
 		return (ft_error());
+	}
 	stack_b = NULL;
+	/* if (!(stack_b))
+		free(argv); */
 	stack_a = ft_create_stack(argv);
+	/* if (!(stack_a))
+		free(argv); */
 	assign_ranks(&stack_a);
 	print_stack(stack_a);
 	sort_stack(&stack_a, &stack_b);
-	/* swap_a(&stack_a); */
 	print_stack(stack_a);
+	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 }
 
 void	print_stack(t_stack *stack)
