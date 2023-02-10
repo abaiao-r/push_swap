@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/09 18:59:14 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/10 13:53:22 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,7 @@ int					find_lowest_number(t_stack *stack);
 int					check_sorted(t_stack **stack_a);
 
 /* sort_stack_utils2 */
-void				assign_ranks(t_stack **stack_a);
+int					count_digits_binary(int rank);
+char				*convert_int_to_binary(int rank, int max);
+int					assign_ranks(t_stack **stack_a);
 #endif

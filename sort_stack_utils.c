@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:23:32 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/08 12:42:39 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 14:26:29 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	check_sorted(t_stack **stack_a)
 	t_stack	*temp;
 
 	temp = (*stack_a);
-	while (temp)
+	while (temp->next != NULL)
 	{
 		if (temp->number > temp->next->number)
 			return (0);
