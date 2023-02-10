@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/10 14:28:11 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/02/10 15:10:58 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ RM = rm -rf
 all: $(NAME)
 	
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $(SRC) -o $(NAME) -fsanitize=address
+		$(CC) $(CFLAGS) $(SRC) -o $(NAME) 
+#-fsanitize=address
 
 clean:	
 			$(RM) $(OBJS)

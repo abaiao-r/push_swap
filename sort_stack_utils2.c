@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:01:05 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 14:05:35 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/10 15:10:31 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*convert_int_to_binary(int rank, int max)
 	i = 0;
 	while (i < rank_max_digits - rank_current_digits)
 	{
-		binary_rank = "0";
+		binary_rank[i] = '0';
 		i++;
 	}
 	while (rank > 0)
