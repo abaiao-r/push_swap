@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arg_parser.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 22:51:30 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/11 03:03:29 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,8 @@
 	}
 	return (i);
 } */
-/* char	**arg_parser(char **argv)
-{
-	char	**arguments_vector;
 
-	arguments_vector = ft_split(argv[1], ' ');
-	return (arguments_vector);
-}
-
-static int	count_words(char const *s, char c)
+/* static int	count_words(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -75,4 +68,13 @@ char	**ft_split(char const *s, char c)
 	}
 	split[count] = 0;
 	return (split);
+}
+
+char	**arg_parser(char **argv)
+{
+	char	**arguments_vector;
+
+		arguments_vector = ft_split(argv[1], ' ');
+
+	return (arguments_vector);
 } */
