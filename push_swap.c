@@ -6,13 +6,13 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 13:34:41 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/11 14:15:52 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* int	main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
@@ -28,8 +28,8 @@
 	sort_stack(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
-} */
-int	free_arguments_vector(char **arguments_vector)
+}
+/* int	free_arguments_vector(char **arguments_vector)
 {
 	int	i;
 
@@ -72,7 +72,7 @@ int	main(int argc, char **argv)
 	sort_stack(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
-}
+} */
 
 /* if you want to print stacks */
 /* void	print_stack(t_stack *stack)
