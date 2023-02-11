@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 12:41:27 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/11 22:55:06 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 	if (!s || !(split))
 		return (0);
 	i = 0;
-	j = 0;
+	j = 1;
 	while (s[i] && j < count)
 	{
 		while (s[i] == c && s[i])
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		split[j++] = ft_substr(s, start, i - start);
 	}
-	split[count] = 0;
+	split[count] = '\0';
 	return (split);
 }
 
@@ -78,3 +78,13 @@ char	**arg_parser(char **argv)
 
 	return (arguments_vector);
 }
+
+/* int		main(int argc, char **argv)
+{
+		(void) argc;
+		char **tmp;
+
+	tmp = ft_split(argv[1], ' ');
+	printf ("%s", tmp[1]);
+	return (0);
+} */

@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 14:15:52 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/11 23:01:17 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (arguments_vector[i])
 	{
 		free(arguments_vector[i]);
