@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 03:03:29 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/11 12:41:27 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 	return (i);
 } */
 
-/* static int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -77,4 +77,4 @@ char	**arg_parser(char **argv)
 		arguments_vector = ft_split(argv[1], ' ');
 
 	return (arguments_vector);
-} */
+}

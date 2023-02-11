@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/10 22:52:45 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/11 13:38:39 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ typedef struct s_list
 int					arguments_count(char **arguments_vector);
 char				**arg_parser(char **argv);
 char				**ft_split(char const *s, char c);
+int					free_arguments_vector(char **arguments_vector);
 
 /* check_argv */
-
 int					argv_is_number(char *argv);
 int					argv_iszero(char *argv);
 int					argv_duplicate(char **argv);
