@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv_utils2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 13:04:08 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/10 22:05:50 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/12 12:38:25 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	str[j] = 0;
 	return (str);
+}
+
+int	free_arguments_vector(char **arguments_vector)
+{
+	int	i;
+
+	i = 1;
+	while (arguments_vector[i])
+	{
+		free(arguments_vector[i]);
+		i++;
+	}
+	free(arguments_vector);
+	return (0);
 }

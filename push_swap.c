@@ -6,47 +6,25 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:34:24 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 23:01:17 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 16:56:32 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+static void	push_swap( t_stack *stack_a, t_stack *stack_b)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-
-	(void)argc;
-	if (argc < 2)
-		return (0);
-	if (!check_argv(argv))
-		return (ft_error());
-	stack_b = NULL;
-	stack_a = ft_create_stack(argv);
 	assign_ranks(&stack_a);
 	sort_stack(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 }
-/* int	free_arguments_vector(char **arguments_vector)
-{
-	int	i;
 
-	i = 1;
-	while (arguments_vector[i])
-	{
-		free(arguments_vector[i]);
-		i++;
-	}
-	free(arguments_vector);
-	return (0);
-}
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	char 	**argument_vector;
+	char	**argument_vector;
 
 	argument_vector = NULL;
 	(void)argc;
@@ -68,13 +46,10 @@ int	main(int argc, char **argv)
 		stack_b = NULL;
 		stack_a = ft_create_stack(argv);
 	}
-	assign_ranks(&stack_a);
-	sort_stack(&stack_a, &stack_b);
-	ft_lstclear(&stack_a);
-	ft_lstclear(&stack_b);
-} */
+	push_swap(stack_a, stack_b);
+}
 
-/* if you want to print stacks */
+/* if you want to print stacks. You also need to add the prototype to push_swap.h*/
 /* void	print_stack(t_stack *stack)
 {
 	while (stack)

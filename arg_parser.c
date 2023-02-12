@@ -6,26 +6,11 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/11 22:55:06 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 12:39:50 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/* int	arguments_count(char **arguments_vector)
-{
-	int		i;
-	char	**arguments_vector;
-
-	if (arguments_vector == NULL)
-		return (0);
-	i = 0;
-	while (arguments_vector[i] != 0)
-	{
-		i++;
-	}
-	return (i);
-} */
 
 static int	count_words(char const *s, char c)
 {
@@ -51,12 +36,12 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 	char	**split;
 
-	count = count_words((char *)s, c);
+	count = count_words((char *)s, c) + 1;
 	split = malloc(sizeof(char *) * (count + 1));
 	if (!s || !(split))
 		return (0);
 	i = 0;
-	j = 0;
+	j = 1;
 	while (s[i] && j < count)
 	{
 		while (s[i] == c && s[i])
@@ -70,15 +55,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-char	**arg_parser(char **argv)
-{
-	char	**arguments_vector;
-
-		arguments_vector = ft_split(argv[1], ' ');
-
-	return (arguments_vector);
-}
-
+/* Main to test ft_split */
 /* int		main(int argc, char **argv)
 {
 		(void) argc;

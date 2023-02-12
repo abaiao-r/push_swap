@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/11 13:38:39 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 16:56:48 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,10 @@ typedef struct s_list
 }					t_stack;
 
 /* arg_parser */
-int					arguments_count(char **arguments_vector);
-char				**arg_parser(char **argv);
 char				**ft_split(char const *s, char c);
-int					free_arguments_vector(char **arguments_vector);
 
 /* check_argv */
 int					argv_is_number(char *argv);
-int					argv_iszero(char *argv);
 int					argv_duplicate(char **argv);
 int					argv_is_int(char **argv);
 int					check_argv(char **argv);
@@ -52,6 +48,7 @@ long long			ft_atol(const char *nptr);
 size_t				ft_strlen(const char *str);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+int					free_arguments_vector(char **arguments_vector);
 
 /* ft_create_stack && ft_create_stack_utils.c && ft_create_stack_utils2.c*/
 
