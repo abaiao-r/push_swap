@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:46 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/12 16:56:48 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 19:36:21 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ char				**ft_split(char const *s, char c);
 int					argv_is_number(char *argv);
 int					argv_duplicate(char **argv);
 int					argv_is_int(char **argv);
-int					check_argv(char **argv);
+int					check_argv(int argc, char **argv);
 
 /* check_argv_utils */
 
 int					ft_error(void);
 int					ft_isdigit(char c);
 int					ft_issign(char c);
-long long			ft_atol(const char *nptr);
+long long			ft_atoll(const char *nptr);
 
 /* check_argv_utils2 */
 size_t				ft_strlen(const char *str);

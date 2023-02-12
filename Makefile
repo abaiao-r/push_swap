@@ -6,19 +6,19 @@
 #    By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 16:08:07 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/02/12 12:09:31 by andrefranci      ###   ########.fr        #
+#    Updated: 2023/02/12 19:10:19 by andrefranci      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC = 	arg_parser.c \
-		check_argv_utils.c \
+SRC = 	check_argv_utils.c \
 		check_argv_utils2.c \
 		check_argv.c \
 		ft_create_stack.c \
 		ft_create_stack_utils.c \
  		ft_create_stack_utils2.c \
+		ft_split.c \
 		push_movements.c \
 		push_swap.c \
 		reverse_rotate_movements.c \

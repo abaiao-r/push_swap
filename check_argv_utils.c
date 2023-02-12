@@ -6,12 +6,16 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:47:25 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 14:51:38 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 19:14:46 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* This function "ft_error" writes the string "Error" 
+followed by a newline character to the standard error output 
+stream (file descriptor 2) and returns 0. It's typically used 
+to indicate an error condition in the program. */
 int	ft_error(void)
 {
 	write(2, "Error\n", 6);
@@ -34,7 +38,7 @@ int	ft_issign(char c)
 		return (0);
 }
 
-long long	ft_atol(const char *nptr)
+long long	ft_atoll(const char *nptr)
 {
 	int		i;
 	long	sign;

@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:33:03 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/08 13:20:06 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/12 18:12:24 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/* sort_stack_5 and sort_stack_4 do the following: 
+(1) rotate stack_a till the smaller number is on the top of 
+the stack, using the rotate_to_lowest_number function.
+(2) push the smallest number to stack_b using push_b.
+(3) use sort_satck_3 funtion to sort stack_a;
+(4) push all numbers in stack_b to stack_a using push_a  */
 void	sort_stack_5(t_stack **stack_a, t_stack **stack_b)
 {
 	*stack_a = rotate_to_lowest_number(*stack_a);
@@ -28,6 +33,15 @@ void	sort_stack_4(t_stack **stack_a, t_stack **stack_b)
 	push_a(stack_b, stack_a);
 }
 
+/* This code is a sorting function for a stack containing 3 
+elements. The stack is represented as a linked list where each 
+node contains an integer, and the head of the list represents 
+the top of the stack.
+
+The function sorts the stack by rearranging the elements to be 
+in ascending order. To do this, it first checks the values of the 
+three elements, and then performs the appropriate operations on 
+the stack to rearrange them. */
 void	sort_stack_3(t_stack **stack_a)
 {
 	int	a;
@@ -61,6 +75,15 @@ void	sort_stack_2(t_stack **stack_a)
 		swap_a(stack_a);
 }
 
+/*  The sort_stack function takes two pointers to the linked 
+lists representing two stacks, Stack A and Stack B. 
+The function check_sorted is used to check if the stack is already 
+sorted, and the ft_lstsize function is used to get the size of the 
+stack.
+Similarly, if the stack size is 3, 4, or 5, it calls the corresponding 
+functions sort_stack_3, sort_stack_4, and sort_stack_5. For larger 
+stacks, the function calls sort_stack_n to sort the stack.
+*/
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
 	(void)(*stack_b);

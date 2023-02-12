@@ -3,15 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:30:03 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/10 19:05:07 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/12 19:08:07 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/* The function sort_stack_n sorts the elements in a stack represented 
+by the pointer stack_a. Radix Sort!!! The sorting is done by converting 
+each element in the stack into binary representation, then sorting the 
+elements in the stack based on each binary digit, starting from the most 
+significant bit (MSB) to the least significant bit (LSB).
+
+The function uses the helper function count_digits_binary to determine the 
+number of binary digits needed to represent the size of the stack. It then 
+uses a loop to sort the elements based on each binary digit, from the MSB 
+to the LSB.
+
+For each iteration of the loop, the function iterates through each element 
+in the stack and checks its binary representation for the current binary 
+digit. If the digit is '1', the function rotates the stack by calling the 
+rotate_a function. If the digit is '0', the function pushes the element to 
+another stack represented by the pointer stack_b by calling the push_b function.
+
+After each iteration of the loop, the function pushes all elements from the 
+stack_b back to the stack_a using the push_a function. The loop continues 
+until all elements in the stack are sorted based on all binary digits or 
+until the stack is already sorted, as determined by the check_sorted 
+function. */
 void	sort_stack_n(t_stack **stack_a, t_stack **stack_b)
 {
 	int	i;

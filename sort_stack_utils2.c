@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack_utils2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:01:05 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/10 22:11:15 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:37:58 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,28 @@ int	count_digits_binary(int rank)
 	return (i);
 }
 
+/* The function convert_int_to_binary is used to convert 
+a decimal number (rank) to its binary representation as a string. 
+The function first calculates the maximum number of digits that the 
+binary representation of the highest-ranked number in the list will 
+have (rank_max_digits). The number of digits that the current rank (rank) 
+will have is also calculated (rank_current_digits).
+
+A string of rank_max_digits characters is then allocated using the 
+ft_calloc function, and is initialized to '\0' to ensure that it is 
+a null-terminated string.
+
+Next, a loop is executed that adds zeros to the beginning of the string 
+until i is equal to rank_max_digits - rank_current_digits. This is done 
+to ensure that all binary representations of ranks will have the same 
+number of digits.
+
+Finally, another loop is executed that converts rank to its binary 
+representation by repeatedly dividing it by 2 and adding the remainder to 
+the string,
+starting from the end of the string and working towards the beginning. 
+The result of this function is the binary representation of rank 
+as a string.  */
 char	*convert_int_to_binary(int rank, int max)
 {
 	int		rank_max_digits;
@@ -56,6 +78,20 @@ char	*convert_int_to_binary(int rank, int max)
 	return (binary_rank);
 }
 
+/* The assign_ranks function takes a double pointer to a linked list
+ stack as an argument. It assigns a rank to each node of the linked
+list based on the value of the node's number field. The rank is 
+defined as the number of nodes in the linked list with a value 
+lower than the current node's value. The function also converts 
+the rank to binary and assigns it to the node's rank_binary field.
+
+To calculate the rank, the function first sets a pointer current to
+ the head of the linked list, and another pointer temp to the head 
+ of the linked list as well. Then, it iterates through the linked 
+ list using the current pointer, and for each node, it calculates 
+ its rank by iterating through the linked list again using the temp 
+ pointer and incrementing the rank counter whenever the temp node's 
+ value is less than the current node's value. */
 int	assign_ranks(t_stack **stack)
 {
 	t_stack	*current;

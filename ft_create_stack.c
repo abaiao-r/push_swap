@@ -6,7 +6,7 @@
 /*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 17:04:06 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/06 14:51:33 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/12 19:17:22 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_stack	*ft_create_stack(char **argv)
 	number = 0;
 	while (argv[i] != 0)
 	{
-		number = ft_atol(argv[i]);
+		number = ft_atoll(argv[i]);
 		if (i == 1)
 		{
 			stack_a = ft_lstnew(number);
