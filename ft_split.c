@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg_parser.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 19:44:50 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/02/12 18:33:54 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/02/13 12:42:40 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		split[j++] = ft_substr(s, start, i - start);
 	}
-	split[count] = '\0';
+	split[count] = 0;
 	return (split);
 }
 
