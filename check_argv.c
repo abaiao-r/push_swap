@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:42:17 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/02/12 19:35:11 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/08/09 16:27:41 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int	check_argv(int argc, char **argv)
 	{
 		if (argc == 2)
 		{
-			if ((!argv_is_number(argv[i])) || (argv_duplicate(argv))
+			if ((argv_is_number(argv[i])) || (argv_duplicate(argv))
 				|| (!argv_is_int(argv)))
 			{
 				free_arguments_vector(argv);
@@ -119,7 +119,7 @@ int	check_argv(int argc, char **argv)
 		}
 		else
 		{
-			if ((!argv_is_number(argv[i])) || (argv_duplicate(argv))
+			if ((argv_is_number(argv[i])) || (argv_duplicate(argv))
 				|| (!argv_is_int(argv)))
 				return (0);
 		}
